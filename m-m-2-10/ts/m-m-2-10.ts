@@ -34,8 +34,8 @@ let nextDep = {
 
 
 while (arrCount < entityCount) {
-
-    if (nextArr < (nextDep.first & nextDep.second)) {
+    // curruntArr = nextArr
+    if (nextArr < (nextDep.first && nextDep.second)) {
         arrCount++
         if (!serverState.first) {
             serverState.first = true
@@ -54,6 +54,7 @@ while (arrCount < entityCount) {
 
 
         nextArr = curruntArr + RandExp(1 / lambda)
+
     }
     else {
         if (nextDep.first < nextDep.second) {
