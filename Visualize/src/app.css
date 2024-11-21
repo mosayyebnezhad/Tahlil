@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.calc50plus72px{
+   margin-top: calc(50vh - 72px);
+}
+
+.uvr34{
+  height: calc(50vh + 72px);
+}
+
+.akejfnef{
+    background: #2233613f;
+    border-radius: 28px;
+}
+
+
