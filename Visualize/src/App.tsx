@@ -2,12 +2,13 @@ import { useContext, useEffect } from "react"
 import "./app.css"
 import Core from "./Components/core"
 import { mainContext } from "./main"
+import Visual from "./Components/Visualize"
 
 function App() {
 
 
 
-  const [state, setState,nahad, addNahad] = useContext(mainContext)
+  const [state, setState, nahad, addNahad] = useContext(mainContext)
 
 
   useEffect(() => {
@@ -18,10 +19,15 @@ function App() {
 
 
     <>
-      <Core />
-      <h1>
-        {`All of you entities ${nahad}`}
-      </h1>
+      <div className="bg-gray-600 w-full h-screen">
+
+
+        <Core />
+        
+        <Visual />
+
+      </div>
+
 
 
 

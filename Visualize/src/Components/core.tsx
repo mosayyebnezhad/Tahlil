@@ -11,8 +11,10 @@ const Core = () => {
 
 
 
-    const entityCount = 10;
+    const entityCount = 15;
     const Time = 1000
+
+
 
 
 
@@ -24,23 +26,15 @@ const Core = () => {
     useEffect(() => {
 
 
-
-
-
         if (nahad == 1) {
             setState({ queue: 0, server: true })
         }
         else if (nahad > 1) {
 
-
             if (nahad > 4) { addLoss(lossCount + 1) }
             else {
-
                 setState({ queue: nahad - 1, server: true })
             }
-
-
-
         }
         else {
             setState({ queue: 0, server: false })
@@ -64,6 +58,12 @@ const Core = () => {
 
 
 
+    useEffect(() => {
+
+        console.log("add one")
+    }, [lossCount])
+
+
 
 
 
@@ -72,74 +72,62 @@ const Core = () => {
 
 
         <>
-            <h1>{`losscount : ${lossCount}`}</h1>
-            <h1>Server : {`${state.server}`} </h1>
-            <h1>
-
-                queue:{`${state.queue}`}
 
 
-            </h1>
 
-            <h1>
-                {nahad}
+            <h1 className="absolute w-full text-5xl text-red-400 opacity-65 text-center mt-[20vh] float-left" >
+                Loss Count : {lossCount}
             </h1>
 
 
 
-            <div className="flex justify-center">
-
-                {Array.from({ length: nahad }).map((_, i) => {
-                    return (
-
-
-                        <Fragment key={i}>
-                            <Nahad rule={i == 0 ? "server" : i > 3 ? "loss" : "normal"} />
-                        </Fragment>
 
 
 
-                    )
-                })}
-            </div>
+            {nahad < 1 &&
+                <div className="absolute bottom-36 w-full flex justify-center">
+                    <button className="bg-green-400 px-6 rounded-lg"
 
-            <button
-
-                onClick={() => {
+                        onClick={() => {
 
 
 
-                    let i = 0
-                    let ouw = setInterval(() => {
-                        i++
-                        addNahad((prev: number) => {
-                            return prev + 1
-                        })
+                            let i = 0
+                            let ouw = setInterval(() => {
+                                i++
 
-
-                        if (i > entityCount) {
-                            clearInterval(ouw)
-                        }
-                    }, Time);
+                                console.log(lossCount)
+                                addNahad((prev: number) => {
+                                    return prev + 1
+                                })
 
 
 
-                    let o = 0
-                    let removing = setInterval(() => {
-                        o++
-
-
-                        addNahad((prev: number) => {
-                            return prev - 1
-                        })
+                                if (i >= entityCount) {
+                                    clearInterval(ouw)
+                                }
+                            }, Time);
 
 
 
-                        if (o > entityCount) {
-                            clearInterval(removing)
-                        }
+                            let o = 0
+                            let removing = setInterval(() => {
+                                o++
 
-                    }, Time * 1.75);
+
+                                addNahad((prev: number) => {
+                                    return prev - 1
+                                })
+
+
+
+
+
+                                if (o >= entityCount) {
+                                    clearInterval(removing)
+                                }
+
+                            }, Time * 1.75);
 
 
 
@@ -149,9 +137,10 @@ const Core = () => {
 
 
 
-                }}
+                        }}
 
-            >Click for increase!</button>
+                    >Click for increase!</button>
+                </div>}
         </>
 
 
