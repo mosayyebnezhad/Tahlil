@@ -1,4 +1,4 @@
-import {  useContext, useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import { mainContext } from "../main"
 // import { Nahad } from "./nahad"
 
@@ -10,14 +10,16 @@ const Core = () => {
     const [lossCount, addLoss] = useState<number>(0)
 
 
+    const [click, addclick] = useState<boolean>(false)
+
 
     const entityCount = 15;
     const Time = 1000
 
 
 
-    
-    
+
+
 
 
 
@@ -88,12 +90,13 @@ const Core = () => {
 
 
 
-            {nahad < 1 &&
+            {!click &&
                 <div className="absolute bottom-36 w-full flex justify-center">
                     <button className="bg-green-400 px-6 rounded-lg"
 
                         onClick={() => {
 
+                            addclick(true)
 
 
                             let i = 0
@@ -144,7 +147,10 @@ const Core = () => {
                         }}
 
                     >Start</button>
-                </div>}
+                </div>
+
+
+            }
         </>
 
 
