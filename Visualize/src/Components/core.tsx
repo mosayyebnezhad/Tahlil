@@ -16,6 +16,10 @@ const Core = () => {
 
 
 
+    
+    
+
+
 
 
 
@@ -139,7 +143,7 @@ const Core = () => {
 
                         }}
 
-                    >Click for increase!</button>
+                    >Start</button>
                 </div>}
         </>
 
