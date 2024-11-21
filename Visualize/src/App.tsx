@@ -1,14 +1,14 @@
-import { useContext, useEffect } from "react"
+import {  useEffect } from "react"
 import "./app.css"
 import Core from "./Components/core"
-import { mainContext } from "./main"
+// import { mainContext } from "./main"
 import Visual from "./Components/Visualize"
 
 function App() {
 
 
 
-  const [state, setState, nahad, addNahad] = useContext(mainContext)
+  // const [state, setState, nahad, addNahad] = useContext(mainContext)
 
 
   useEffect(() => {

@@ -1,9 +1,9 @@
 
-import { CircularProgressbar } from 'react-circular-progressbar';
+// import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import CircularProgress from './progressBar';
 
-export const Nahad = ({ rule, progress }: { rule?: "server" | "normal" | "loss", progress?: number }) => {
+export const Nahad = ({ rule,  }: { rule?: "server" | "normal" | "loss", progress?: number }) => {
 
 
     const classnames: string = `flex justify-center items-center w-24 h-24 rounded-full bg-gray-900 ${rule === "server" && "bg-green-400"} ${rule === "loss" && "bg-red-600"}`

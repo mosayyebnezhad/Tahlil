@@ -1,9 +1,9 @@
-import { Fragment, useContext, useEffect, useState } from "react"
+import {  useContext, useEffect, useState } from "react"
 import { mainContext } from "../main"
-import { Nahad } from "./nahad"
+// import { Nahad } from "./nahad"
 
 const Core = () => {
-    const [state, setState, nahad, addNahad] = useContext(mainContext)
+    const [, setState, nahad, addNahad] = useContext(mainContext)
 
 
 
