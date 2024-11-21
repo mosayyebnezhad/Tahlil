@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 
@@ -27,7 +27,7 @@ const CircularProgress = ({ time }: { time: number }) => {
           textColor: "#000",
           pathColor: "#4caf50",
           trailColor: "#d6d6d6",
-          pathTransition:"none"
+          pathTransition: "none"
         })}
       />
     </div>

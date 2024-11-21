@@ -1,11 +1,11 @@
-import { Fragment, useContext } from "react"
+import {  useContext } from "react"
 import { Nahad } from "./nahad"
 import { mainContext } from "../main"
 
 const Visual = () => {
 
 
-    const [state, setState, nahad, addNahad] = useContext(mainContext)
+    const [state, , , ] = useContext(mainContext)
 
 
 

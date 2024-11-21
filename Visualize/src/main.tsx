@@ -9,7 +9,7 @@ export const mainContext = createContext(null as any)
 
 const Main = () => {
 
-  const [level, setLevel] = useState<number>(0)
+
 
 
 

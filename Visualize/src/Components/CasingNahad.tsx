@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react"
+import { useContext } from "react"
 import { Nahad } from "./nahad"
 import { mainContext } from "../main"
 
@@ -7,7 +7,7 @@ const CasingNahad = () => {
 
 
 
-    const [level, setLevel] = useContext(mainContext)
+    const [level,] = useContext(mainContext)
 
 
 
